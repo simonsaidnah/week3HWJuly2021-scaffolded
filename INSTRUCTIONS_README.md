@@ -8,49 +8,50 @@ When you add the match class to an element, what does it do?
 When you remove a flip element, what does it do?
 Why does querySelectAll give us an array of elements?
 
-
-
-
-1. (X) Connect the given javascript file to your HTML 
+<!-- 1. (X) Connect the given javascript file to your HTML
 2. (X) Connect the given styles file to your HTML
-3. (X) Use the styles file to center the container class element in the middle of the screen using flexbox use a flex direction of column
-4.  In your HTML file, inside of the section element that has a class of "win-game-modal", Create a div in your HTML that has a class of modal and id of modal
-	1. add a child div to that modal and give it class of modal-content
-	2. The next 6 steps all happen in the div.modal-content element
-		1. add a span with an id of close
-		2. inside of the span with the id of close, type &times; in the opening and closing span tags.
-		3.  inform the user that they won and found all 8 pairs of cards
-		4. Show the vault-boy-thumb-up image
-		5. add a button with a class of btn and play-again-btn with text that reads "Play Again?"
-		6. (X) Style the modal content and make it look good  (try display flex, justify content center, flex direction column, align items center)
-	3. Once your done styling the modal class implement the following changes
-		1. give your modal class
-			1. (X) position: fixed
-			2. (X) top: 0
-			3. (X) left: 0
-			4. (X) display: none
+3. (X) Use the styles file to center the container class element in the middle of the screen using flexbox use a flex direction of column -->
+<!-- 4.  In your HTML file, inside of the section element that has a class of "win-game-modal", Create a div in your HTML that has a class of modal and id of modal -->
+
+    <!-- 1. add a child div to that modal and give it class of modal-content -->
+    <!-- 2. The next 6 steps all happen in the div.modal-content element
+    	<!-- 1. add a span with an id of close -->
+    	<!-- 2. inside of the span with the id of close, type &times; in the opening and closing span tags. -->
+    	<!-- 3.  inform the user that they won and found all 8 pairs of cards -->
+    	<!-- 4. Show the vault-boy-thumb-up image -->
+    	<!-- 5. add a button with a class of btn and play-again-btn with text that reads "Play Again?" -->
+    	<!-- 6. (X) Style the modal content and make it look good  (try display flex, justify content center, flex direction column, align items center) --> -->
+    <!-- 3. Once your done styling the modal class implement the following changes
+    	1. give your modal class
+    		1. (X) position: fixed
+    		2. (X) top: 0
+    		3. (X) left: 0
+    		4. (X) display: none -->
+
 5. Go to the JS file and look over the code, using the steps below will guide you on fixing the code.
-	1. (X) Go to the startGame function and implement the pseudo code
-	2. (X) Go to the compareTwo function and implement the pseudo code
-	3. (X) Go the displayMatching Cards function and complete the unimplemented pseudo code
-	4. (X) Go to the checkIsGameFinished and implement pseudo code
-	5. (X) Go to the addStatsToModal function and complete the unimplemented pseudocode
-		1. Also change the innerHTML for the p tags so that they have useful information in it to the user.
-	6. (X) Go to the displayModal function and complete the unimplemented pseudocode
+   <!-- 1. (X) Go to the startGame function and implement the pseudo code -->
+   <!-- 2. (X) Go to the compareTwo function and implement the pseudo code -->
+   <!-- 3. (X) Go the displayMatching Cards function and complete the unimplemented pseudo code
+   4. (X) Go to the checkIsGameFinished and implement pseudo code -->
+   <!-- 5. (X) Go to the addStatsToModal function and complete the unimplemented pseudocode
+      1. Also change the innerHTML for the p tags so that they have useful information in it to the user. -->
+   <!-- 6. (X) Go to the displayModal function and complete the unimplemented pseudocode -->
 
 Stuck??
+
 - After each major step, click through the game and see if any errors come up. If an error comes up refer to steps above and corresponding pseudo code to ensure to implemented it correctly.
 - Open up the sources tab in the dev tools. Then open the js file and place a break in the start game function and or where you think the problem is to figure out where the bug is.
 
-
 Challenge Mode
+
 - Write your own shuffle function
 
-
-Hints: Only look at these if you absolutely stuck. You can do this! Don't give up. Reread the steps. Go to office hours. Ping an instructor or another student for help before checking this out, open up the dev tools, look in the console for errors, use the debugger. 
+Hints: Only look at these if you absolutely stuck. You can do this! Don't give up. Reread the steps. Go to office hours. Ping an instructor or another student for help before checking this out, open up the dev tools, look in the console for errors, use the debugger.
 
 It will serve you will not to rely on this until you have tried everything.
+
 - startGame()
+
 ```
 // TODO: Implement this function
 function startGame() {
@@ -76,7 +77,9 @@ function startGame() {
   }
 }
 ```
+
 - DisplayMatchingCards()
+
 ```
 // TODO: complete the unimplemented pseudo code
 function displayMatchingCards() {
@@ -95,7 +98,7 @@ function displayMatchingCards() {
     document.body.style.pointerEvents = "auto";
     // TODO: invoke the checkIsGameFinished function
     checkIsGameFinished()
-   
+
     // Clear the opened array
     opened = [];
   }, 600);
@@ -104,7 +107,9 @@ function displayMatchingCards() {
   adjustStarRating();
 }
 ```
+
 - DisplayNotMatchingCards()
+
 ```
 function displayNotMatchingCards() {
   /* After 700 miliseconds the two cards open will have
@@ -123,7 +128,9 @@ function displayNotMatchingCards() {
   adjustStarRating();
 }
 ```
+
 - addStatsToModal
+
 ```
 function addStatsToModal() {
   // Access the modal content div
@@ -136,7 +143,7 @@ function addStatsToModal() {
     // Add a class to the new Paragraph
     // TODO: add the stats class to the statsElement
     statsElement.classList.add('stats')
-    
+
     // Add the new created <p> tag to the modal content
     // TODO: add the statsElement as a child of the statsParent element
     statsParent.appendChild(statsElement);
@@ -150,7 +157,9 @@ function addStatsToModal() {
   p[2].innerHTML = "Update this with the star rating";
 }
 ```
+
 - displayModal
+
 ```
 // TODO: Implement the pseudocode
 function displayModal() {
@@ -160,7 +169,7 @@ const modalClose = document.getElementById("close");
 const modal = document.getElementById("modal");
 // Set modal to display block to show it
 modal.style.display = "block"
-// When the user clicks on <span> (x), 
+// When the user clicks on <span> (x),
 modalClose.onclick = function() {
     // set modal to diplay none
     modal.style.diplay = "none"
@@ -175,7 +184,9 @@ modalClose.onclick = function() {
   };
 }
 ```
+
 - checkIsGameFinished
+
 ```
 function checkIsGameFinished() {
   // there are 8 images total
@@ -187,23 +198,25 @@ function checkIsGameFinished() {
     // tally stats
     // TODO: invoke the addStatsToModal
     addStatsToModal();
-    
+
     // display modal
     // TODO: invoke the displayModal function
     displayModal();
-    
+
   }
 }
 ```
+
 - CompareTwo function. Try this:
+
 ```
 if (opened.length === 2 && opened[0].src === opened[1].src) {
     // TODO: Invoke the displayMatchingCards()
-    // TODO: console log "It's a Match!"  
-    
+    // TODO: console log "It's a Match!"
+
   } else if (opened.length === 2 && opened[0].src !== opened[1].src) {
   // TODO: if the image src's do not match
-  
+
     // TODO: invoke the displayNotMatchingCards()
     // TODO: console log "No Match!"
   }
